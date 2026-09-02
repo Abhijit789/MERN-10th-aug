@@ -108,3 +108,7 @@ function paymentMode(paymentMode,amount){
 
 paymentMode("creditcard")(2500)
 paymentMode("upi")(2500)
+
+
+
+
