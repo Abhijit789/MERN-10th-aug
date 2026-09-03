@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- <a href="https://www.google.com">Google</a>
+     <a href="https://www.twitter.com">Twitter</a>
+     <a href="https://www.wikipedia.org">Wikipedia</a>
+     <img src="" alt="">
+     <img src="" alt="">
+     <img src="" alt=""> -->
+
+     <div class="box firstBox" id="box">BOX 1</div>
+     <span class="span" id="span1"></span><span class="span" id="span2"></span><span class="span" id="span3"></span>
+     <div class="box" id="box"></div>
+     <div class="box" id="box">BOX 3</div>
+     <div class="box" id="box"></div>
+     <img src="" alt="" class="img">
+
+     <button onclick="getBoxCreated()">Create Box</button>
+
+    <script>
+    // console.log(document);
+    // console.log(document.links);
+    // console.log(document.images);
+
+    
+    // Targeting HTML elements using dom methods 
+    //   querySelector(): 
+
+    // let ele1=document.querySelector(".box");
+    // console.log(ele1);
+    // console.log(ele1[0]);  //undefined
+
+    // querySelectorAll()
+
+    // let ele2=document.querySelectorAll("div");
+
+    // console.log(ele2);
+
+    // for(let i=0;i<ele2.length;i++){
+    //       if((i+1)%2==0){
+    //         ele2[i].style.textAlign="center";
+    //         ele2[i].style.height="100px";
+    //         ele2[i].style.width="100px";
+    //         ele2[i].style.border="2px solid red";
+    //         ele2[i].style.lineHeight="100px";
+    //         ele2[i].innerHTML=`BOX ${i+1}`
+
+    //       }
+    // }
+
+
+    // getElementById()
+   
+    // let ele3=document.getElementById("box");
+    // console.log(ele3.classList);
+
+    // console.log(ele3.id);
+    
+
+    // // getElementByClassName()
+
+    let ele4=document.getElementsByClassName("box");
+    // console.log(ele4[0].classList.remove("box"));
+
+    for(let i=0;i<ele4.length;i++){
+        if((i+1)%2==0){
+            ele4[i].style.color="red";
+            ele4[i].innerHTML=`BOX ${i+1}`
+        }else{
+            
+            ele4[i].style.color="green";
+            ele4[i].innerHTML=`BOX ${i+1}`
+        }
+    }
+
+    // getElementByTagName()
+
+    // let ele5=document.getElementsByTagName("div");
+    // console.log(ele5);
+    
+    
+    // creteElement("elementName")
+
+    // let h1=document.createElement("h1");
+
+    // document.body.appendChild(h1);
+    // h1.innerHTML="heading created";
+
+    // h1.setAttribute("class","heading");
+
+    // console.log(h1.classList);
+
+    // h1.style.color="red";
+
+    // console.log(h1.classList.contains("heading"));
+
+    // console.log(h1.classList.replace("heading","newheading"));
+
+    // console.log(h1.classList);
+
+    // console.log(h1.classList.remove("heading"));
+    // console.log(h1.classList.remove("newheading"));
+    
+    
+
+    // console.log(ele4[0].classList.remove("box"));
+
+    // console.log(ele4[0].classList);
+
+    // ele4[0].id="new id";
+
+    // console.log(ele4[0].id);
+
+    // ele4[0].className="newclass"
+
+    // console.log(ele4[0].classList);
+
+    // let newEle=document.getElementsByClassName("newclass");
+
+    // console.log(newEle);
+
+    // newEle[0].style.backgroundColor="aqua"
+
+
+    // create Element
+
+    let div=document.createElement("div");
+    document.body.appendChild(div);
+
+    let headingEle=document.createElement("h1");
+    div.appendChild(headingEle)
+
+    console.log("new element created",div);
+
+    headingEle.innerHTML="Heading Text";
+
+    headingEle.setAttribute("class","heading");
+
+    let headingByClass=document.getElementsByClassName("heading");
+
+    headingByClass[0].style.color="red"
+
+    div.setAttribute("id","box");
+
+    let divById=document.getElementById("box");
+     
+
+    function getBoxCreated(){
+        
+    divById.style.height="200px";
+    divById.style.width="200px";
+    divById.style.border="2px solid blue";
+    divById.style.lineHeight="200px";
+    divById.style.textAlign="center";
+    }
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    </script>
+</body>
+</html>
