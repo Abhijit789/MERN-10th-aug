@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text" oncopy="getCopy()" oncut="getCut()" onpaste="getPaste()">Copy this text</p>
+    <script>
+        let copyText=document.getElementById("text")
+        function getCopy(){
+           window.alert("Your text is successfuly copied!")
+        }
+
+        function getPaste(){
+           window.alert("Your text is successfuly pasted!")
+        }
+
+        function getCut(){
+           window.alert("Your text is successfuly cut!")
+        }
+    </script>
+</body>
+</html>

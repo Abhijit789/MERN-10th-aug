@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 180px;
+           
+        }
+        .box h1{
+             display: none;
+        }
+
+        .box~button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+     <div class="box">
+        <h1 class="heading">Visible</h1>
+     </div>
+    <button onclick="makeVisibleWithLight()">Visible</button>
+    <button onclick="hideElementByDark()">Hide</button>
+    <script>
+        let ele=document.getElementsByClassName("heading");
+        let box=document.getElementsByClassName("box");
+         function makeVisibleWithLight(){
+            ele[0].style.display="block"
+            box[0].style.backgroundColor="pink";
+            ele[0].style.color="red"
+         }
+
+         function hideElementByDark(){
+            ele[0].style.display="none"
+            
+            box[0].style.backgroundColor="black";
+            // ele[0].style.color="red"
+         }
+    </script>
+</body>
+</html>

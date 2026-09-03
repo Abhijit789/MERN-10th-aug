@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Showroom</h1>
+    <select name="" id="vehicle" onchange="getBookYourCar()">
+        <option value="" selected disabled>Select Your Car</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Lamborghini">Lambo</option>
+        <option value="BMW">BMW</option>
+        <option value="Rolls Royce">Rolls Royce</option>
+    </select>
+    <div class="img"></div>
+    <p class="print"></p>
+    
+
+    <script>
+        let print=document.getElementsByClassName("print");
+        let vehicleImage=document.getElementsByClassName("img")
+        function getBookYourCar(){
+            
+        let vehicle=document.getElementById("vehicle")
+
+        let selectedVehicle=vehicle.value;
+
+        print[0].innerHTML=`Congratulations your car ${selectedVehicle} is succesfuly booked on ${new Date()}`
+
+        console.log(selectedVehicle);
+        print[0].style.color="red"
+
+        if(selectedVehicle==="Mercedes"){
+            
+            vehicleImage[0].style.backgroundImage=`url("https://images.pexels.com/photos/12964184/pexels-photo-12964184.jpeg")`
+            vehicleImage[0].style.backgroundPosition="center"
+            vehicleImage[0].style.backgroundSize="cover"
+            vehicleImage[0].style.height="250px"
+            vehicleImage[0].style.width="250px"
+
+
+        }else if(selectedVehicle=="Lamborghini"){
+            vehicleImage[0].style.backgroundImage=`url("https://images.pexels.com/photos/13980815/pexels-photo-13980815.jpeg")`
+            vehicleImage[0].style.backgroundPosition="center"
+            vehicleImage[0].style.backgroundSize="cover"
+            vehicleImage[0].style.height="250px"
+            vehicleImage[0].style.width="250px"
+
+        }else if(selectedVehicle=="BMW"){
+            vehicleImage[0].style.backgroundImage=`url("https://images.pexels.com/photos/12066287/pexels-photo-12066287.jpeg")`
+            vehicleImage[0].style.backgroundPosition="center"
+            vehicleImage[0].style.backgroundSize="cover"
+            vehicleImage[0].style.height="250px"
+            vehicleImage[0].style.width="250px"
+
+        }else if(selectedVehicle=="Rolls Royce"){
+            vehicleImage[0].style.backgroundImage=`url("https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg")`
+            vehicleImage[0].style.backgroundPosition="center"
+            vehicleImage[0].style.backgroundSize="cover"
+            vehicleImage[0].style.height="250px"
+            vehicleImage[0].style.width="250px"
+
+        }
+        
+
+        }
+    </script>
+</body>
+</html>
